@@ -4,6 +4,14 @@ on:
   push:
     branches:
       - main  # Esso sarà eseguito ogni volta che fai un push su main
+      
+      
+# Allow this job to clone the repo and create a page deployment
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
 
 jobs:
   deploy:
